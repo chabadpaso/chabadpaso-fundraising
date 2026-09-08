@@ -351,8 +351,6 @@
         </div>
       </div>
 
-      <div class="caring-wall-heading">Our Caring Wall</div>
-
       <div class="caring-grid" id="caring-donor-grid">
         <div class="caring-load-message">Loading...</div>
       </div>
