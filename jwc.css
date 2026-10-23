@@ -1,61 +1,56 @@
-/* JWC page, v1. Scoped to pages containing .jwc-intro. */
-:root { --jwc-plum:#713e58; --jwc-rose:#a65e7a; --jwc-pale:#faf1f4; --jwc-ink:#352e32; --jwc-muted:#70666a; --jwc-border:#ebdce3; }
-.jwc-site, .jwc-site * { box-sizing:border-box; }
-.jwc-site { color:var(--jwc-ink); font-family:Arial,Helvetica,sans-serif; line-height:1.6; }
-.jwc-site h1,.jwc-site h2,.jwc-site p { margin-top:0; }
-.jwc-intro,.jwc-past { width:min(100% - 28px, 960px); margin-inline:auto; }
-.jwc-header { text-align:center; padding:45px 18px 37px; background:var(--jwc-pale); border-radius:0 0 22px 22px; margin-bottom:45px; }
-.jwc-eyebrow,.jwc-section-kicker { color:var(--jwc-rose); font-size:12px; font-weight:700; letter-spacing:.14em; }
-.jwc-header h1 { font-family:Georgia,'Times New Roman',serif; color:var(--jwc-plum); font-size:clamp(34px,5.5vw,58px); font-weight:normal; line-height:1.12; margin:13px 0; }
-.jwc-header p { color:var(--jwc-plum); margin:0; font-size:15px; }
-.jwc-feature { padding:0 4px 25px; }
-.jwc-feature>h2,.jwc-past>h2,.jwc-registration-heading h2 { font-family:Georgia,'Times New Roman',serif; color:var(--jwc-plum); font-weight:normal; line-height:1.2; }
-.jwc-feature>h2 { font-size:clamp(29px,4vw,43px); margin:9px 0; }
-.jwc-lede { color:var(--jwc-muted); font-size:18px; max-width:700px; }
-.jwc-event-grid { display:grid; grid-template-columns:minmax(0, 0.88fr) minmax(0,1.12fr); align-items:start; gap:32px; margin-top:25px; }
-.jwc-flyer img { display:block; width:100%; height:auto; border-radius:13px; box-shadow:0 9px 28px rgba(75,34,54,.13); }
-.jwc-event-copy { font-size:16px; }
-.jwc-event-copy p { margin:0 0 15px; }
-.jwc-details { display:flex; flex-direction:column; gap:4px; padding:18px 20px; background:var(--jwc-pale); border-radius:12px; margin-bottom:20px; }
-.jwc-details strong { font-size:17px; color:var(--jwc-plum); }
-.jwc-details a { color:var(--jwc-plum); text-decoration:underline; }
-.jwc-register-link { display:inline-block; background:var(--jwc-plum); color:white!important; text-decoration:none!important; font-weight:700; border-radius:8px; padding:12px 19px; margin-top:6px; }
-.jwc-register-link:hover { background:#552b40; }
-.jwc-registration-heading { text-align:center; padding:28px 12px 14px; border-top:1px solid var(--jwc-border); margin-top:32px; }
-.jwc-registration-heading h2 { font-size:35px; margin:6px 0; }
-.jwc-registration-heading p { color:var(--jwc-muted); }
-.jwc-past { margin-top:55px; padding:36px 0 0; border-top:1px solid var(--jwc-border); text-align:center; }
-.jwc-past>h2 { font-size:clamp(28px,4vw,40px); margin:9px 0; }
-.jwc-gallery-intro { color:var(--jwc-muted); margin-bottom:29px; }
-.jwc-gallery-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px 18px; }
-.jwc-gallery-card { display:flex; flex-direction:column; align-items:center; color:var(--jwc-ink)!important; text-decoration:none!important; min-width:0; padding:11px; border:1px solid var(--jwc-border); border-radius:13px; background:#fff; box-shadow:0 3px 12px rgba(75,34,54,.04); }
-.jwc-gallery-card[href]:hover { box-shadow:0 8px 22px rgba(75,34,54,.13); transform:translateY(-2px); }
-.jwc-gallery-art { width:100%; aspect-ratio:1 / 1; display:flex; align-items:center; justify-content:center; background:#fbf8f9; border-radius:9px; overflow:hidden; margin-bottom:11px; }
-.jwc-gallery-art img { display:block; width:100%; height:100%; object-fit:contain; }
-.jwc-gallery-title { font-size:15px; line-height:1.25; font-weight:700; }
-.jwc-gallery-date { font-size:12px; color:var(--jwc-muted); margin-top:3px; }
-.jwc-footer { margin-top:55px; padding:24px; background:var(--jwc-pale); border-radius:14px 14px 0 0; display:flex; flex-direction:column; color:var(--jwc-plum); }
-.jwc-footer span { font-size:13px; }
-/* Form: only modest, page-specific rules. Do not change card-payment internals. */
-body:has(.jwc-intro) { overflow-x:hidden; }
-body:has(.jwc-intro) input[type="submit"],body:has(.jwc-intro) button[type="submit"] { background:var(--jwc-plum); color:white; border:0; border-radius:8px; padding:12px 25px; cursor:pointer; }
-@media(max-width:700px) {
- .jwc-intro,.jwc-past { width:calc(100% - 24px); }
- .jwc-header { padding:32px 13px; margin-bottom:31px; }
- .jwc-event-grid { grid-template-columns:1fr; gap:23px; }
- .jwc-flyer { max-width:480px; margin:auto; }
- .jwc-gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
- .jwc-gallery-card { padding:8px; }
- .jwc-gallery-title { font-size:14px; }
- .jwc-gallery-date { font-size:11px; }
- .jwc-lede { font-size:16px; }
-}
-@media(min-width:701px) and (max-width:900px) { .jwc-gallery-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
-
-/* JWC registration form alignment */
-body:has(.jwc-intro) .userform-form .form-all {
-  max-width: 960px;
-  width: calc(100% - 32px);
-  margin-left: auto;
-  margin-right: auto;
-}
+/* JWC elegant redesign v2. Keep this file separate from unrelated pages. */
+:root{--jwc-plum:#713e58;--jwc-wine:#6d344f;--jwc-rose:#ad6b82;--jwc-pale:#faf0f3;--jwc-cream:#fffaf6;--jwc-ink:#332831;--jwc-muted:#75616b;--jwc-border:#ebd9df}
+.jwc-site,.jwc-site *{box-sizing:border-box}
+.jwc-site{font-family:Arial,Helvetica,sans-serif;color:var(--jwc-ink);line-height:1.65}
+.jwc-site h1,.jwc-site h2,.jwc-site p{margin-top:0}
+.jwc-intro,.jwc-past{width:min(calc(100% - 36px),1100px);margin-inline:auto}
+/* A deliberately designed, permanent identity */
+.jwc-header{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:74px 25px 60px;margin:22px 0 62px;background:linear-gradient(118deg,#f5e4e9 0%,#fffaf8 45%,#f9e6ed 100%);border:1px solid #f0dce3;border-radius:24px;box-shadow:0 14px 40px rgba(91,43,65,.07)}
+.jwc-header:before,.jwc-header:after{content:'✿';position:absolute;font-family:Georgia,serif;color:#d9a6b7;opacity:.34;font-size:170px;line-height:1;z-index:-1}
+.jwc-header:before{left:-38px;top:-44px;transform:rotate(-20deg)}
+.jwc-header:after{right:-28px;bottom:-76px;transform:rotate(28deg)}
+.jwc-eyebrow,.jwc-section-kicker{font-size:12px;font-weight:700;letter-spacing:.22em;color:#9e536e;text-transform:uppercase}
+.jwc-header h1{font-family:Georgia,'Times New Roman',serif;font-weight:normal;color:var(--jwc-wine);font-size:clamp(40px,5.4vw,76px);line-height:1.08;letter-spacing:-.025em;margin:16px 0}
+.jwc-header p{font-size:15px;letter-spacing:.13em;color:#865b6d;margin:0}
+.jwc-ornament{margin:19px auto 0;color:#b5778c;font-size:18px;max-width:200px;display:flex;align-items:center;gap:16px;justify-content:center}
+.jwc-ornament:before,.jwc-ornament:after{content:'';height:1px;width:65px;background:#d7a9b7}
+/* Featured event */
+.jwc-feature{position:relative;padding:0 14px 38px}
+.jwc-feature>h2,.jwc-past>h2,.jwc-registration-heading h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal;color:var(--jwc-wine);line-height:1.15}
+.jwc-feature>h2{font-size:clamp(36px,4.5vw,56px);margin:8px 0 10px}
+.jwc-lede{font-size:19px;color:var(--jwc-muted);max-width:770px;margin-bottom:28px}
+.jwc-event-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:48px;align-items:start}
+.jwc-flyer{position:relative;padding:16px 0 0 16px}
+.jwc-flyer:before{content:'';position:absolute;inset:0 16px 18px 0;border-radius:22px;background:#f0d8df;transform:rotate(-3deg)}
+.jwc-flyer img{position:relative;display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 16px 36px rgba(91,43,65,.17);transform:rotate(1deg)}
+.jwc-event-copy{padding:4px 0;font-size:16px}
+.jwc-event-copy p{margin:0 0 17px}
+.jwc-details{display:flex;flex-direction:column;gap:6px;padding:24px 27px;margin-bottom:26px;background:linear-gradient(135deg,#f9e9ee,#fff8f8);border-left:3px solid #b7748b;border-radius:3px 17px 17px 3px}
+.jwc-details strong{font-size:18px;color:var(--jwc-wine)}
+.jwc-details a{color:var(--jwc-wine);text-decoration:underline;text-underline-offset:3px}
+.jwc-register-link{display:inline-block;background:var(--jwc-wine);color:#fff!important;text-decoration:none!important;padding:14px 22px;border-radius:8px;font-weight:700;margin-top:8px}
+.jwc-register-link:hover{background:#4c2338}
+/* Registration introduction; native form remains owned by ChabadOne */
+.jwc-registration-heading{margin:54px 0 0;padding:45px 20px 28px;text-align:center;background:linear-gradient(135deg,#fff9f8,#f8e9ee);border:1px solid #f0dce3;border-radius:20px 20px 0 0}
+.jwc-registration-heading h2{font-size:clamp(31px,3.7vw,45px);margin:10px 0}
+.jwc-registration-heading p{color:var(--jwc-muted);margin:0}
+/* Target only the specific JWC form; avoid card/payment internals */
+body:has(.jwc-intro) form.userform-form .form-all{max-width:1100px;width:calc(100% - 36px);margin-left:auto!important;margin-right:auto!important}
+body:has(.jwc-intro) form.userform-form .form-section{max-width:100%}
+body:has(.jwc-intro) form.userform-form input[type='submit'],body:has(.jwc-intro) form.userform-form button[type='submit']{background:var(--jwc-wine);color:#fff;border:0;border-radius:8px;padding:13px 28px}
+/* Past event gallery: flyers stay fully visible, including portrait and square */
+.jwc-past{margin-top:72px;padding:54px 0 0;text-align:center;border-top:1px solid var(--jwc-border)}
+.jwc-past>h2{font-size:clamp(34px,4vw,49px);margin:12px 0}
+.jwc-gallery-intro{color:var(--jwc-muted);font-size:17px;margin:0 0 32px}
+.jwc-gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.jwc-gallery-card{display:flex;flex-direction:column;align-items:center;min-width:0;padding:14px 14px 20px;background:#fffaf9;border:1px solid #eedde2;border-radius:15px;color:var(--jwc-ink)!important;text-decoration:none!important;box-shadow:0 8px 25px rgba(91,43,65,.06);transition:transform .2s,box-shadow .2s}
+.jwc-gallery-card[href]:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(91,43,65,.13)}
+.jwc-gallery-art{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1/1;background:#f7eef0;border-radius:10px;overflow:hidden;margin-bottom:14px}
+.jwc-gallery-art img{width:100%;height:100%;object-fit:contain;display:block}
+.jwc-gallery-title{font-weight:700;font-size:15px;line-height:1.35}
+.jwc-gallery-date{font-size:12px;color:var(--jwc-muted);margin-top:4px}
+.jwc-footer{display:flex;flex-direction:column;gap:3px;margin-top:65px;padding:31px;background:linear-gradient(120deg,#f7e6ec,#fff8f6);border-radius:17px;text-align:center;color:var(--jwc-wine)}
+.jwc-footer strong{font-family:Georgia,serif;font-size:23px;font-weight:normal}
+.jwc-footer span{font-size:13px}
+@media(max-width:750px){.jwc-intro,.jwc-past{width:calc(100% - 24px)}.jwc-header{margin:10px 0 38px;padding:48px 18px 42px}.jwc-header:before,.jwc-header:after{font-size:100px}.jwc-header p{font-size:12px;letter-spacing:.08em}.jwc-feature{padding:0 4px 20px}.jwc-event-grid{grid-template-columns:1fr;gap:26px}.jwc-flyer{max-width:470px;margin:0 auto}.jwc-lede{font-size:17px}.jwc-details{padding:20px}.jwc-registration-heading{margin-top:36px}.jwc-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.jwc-gallery-card{padding:8px 8px 14px}.jwc-gallery-title{font-size:13px}.jwc-gallery-date{font-size:11px}}
+@media(min-width:751px) and (max-width:950px){.jwc-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.jwc-event-grid{gap:26px}}
